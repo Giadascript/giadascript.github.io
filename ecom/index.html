@@ -4,7 +4,7 @@
     <title>Example 16</title>
     <meta charset="utf-8">
     <style>
-	body {
+		body {
 		margin: 40px;
 	}
 
@@ -15,10 +15,17 @@
 	.content {
 		grid-area: content;
 		position: relative;
-        	display: grid;
-    		grid-gap: 10px;
-        	grid-template-columns: 1fr 1fr;		
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;		
 	}
+  
+  .placement{
+		position: relative;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;		
+  }
 
 	.header {
 		grid-area: header;
@@ -101,7 +108,14 @@
     	.a3 {
         grid-column: 2;
         grid-row: 2;
+  	}	   
+    
+        .a4 {
+        grid-column: 3;
+        grid-row: 2;
   	}	    
+
+    
 
    </style>
 </head>
@@ -109,22 +123,51 @@
  <body>
 
 	 <div class="wrapper">
-	 	<div class="box header">Navigation</div>
-		<!-- div class="box sidebar">Sidebar</div -->	 
-		<div class="box content">Content
-			<br /> The four arrows are inline images inside the content area.
+	 	<div data-element-id="X_X_MainNav" class="box header">Navigation</div>
+
+		<div data-element-id="X_Home" class="box content">Content
 			
-			<div class="box">Placement1
-				<div class="box a1">1</div>
-				<div class="box a2">2</div>
-				<div class="box a3">3</div>
-			</div>
-			
-			<img src="" alt="top left" class="topleft" />
-			<img src="" alt="top right" class="topright" />
-			<img src="" alt="bottom left" class="bottomleft" />
-			<img src="" alt="bottom right" class="bottomright" />
-		 </div>
+			<div data-element-id="X_Home_Placement1" class="box placement">Placement1
+      
+ 				<div data-element-id="X_Home_Placement1_Item1" class="box a1">
+          <a data-element-id="X_Home_Placement1_Item1-IMG" href="#link"><img src="arrow-top-left.png"/></a>
+          <a data-element-id="X_Home_Placement1_Item1-LINK" href="#link">Link</a>
+          <a data-element-id="X_Home_Placement1_Item1-CTA1" href="#link">CTA1</a>
+          <a data-element-id="X_Home_Placement1_Item1-CTA2" href="#link">CTA2</a>
+        </div>
+				<div class="box a2">
+          <a data-element-id="X_Home_Placement1_Item2-CARTADD" href="#link">AddToCart</a>
+        </div>
+				<div class="box a3">
+				  <a data-element-id="X_Home_Placement1_Item3-PLAY" href="#link">Video</a>
+				</div>
+        
+      </div>
+      
+      <div data-element-id="X_Home_Placement2" class="box placement">Placement2
+      	<div class="box a2">
+          <a data-element-id="X_Home_Placement2_Item1-CARTADD" href="#link">AddToCart</a>
+        </div>
+				<div class="box a3">
+				  <a data-element-id="X_Home_Placement2_Item2-PLAY" href="#link">Video</a>
+				</div>
+      </div>
+      
+      <div data-element-id="X_Home_Placement3" class="box placement">Placement3
+      	<div class="box a2">
+          <a data-element-id="X_Home_Placement3_Item1-CARTADD" href="#link">AddToCart</a>
+        </div>
+				<div class="box a3">
+				  <a data-element-id="X_Home_Placement3_Item2-PLAY" href="#link">Video</a>
+				</div>
+				<div class="box a4">
+				  <a data-element-id="X_Home_Placement3_Item3-PLAY" href="#link">Video</a>
+				</div>
+        
+      </div>      
+     
+
+    </div>
 		 
 		<div class="box footer">Footer</div>
 	</div>
